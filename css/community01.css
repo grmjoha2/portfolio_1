@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+#comm01_section .subVisual {height: 286px; background: url(../images/sub-visual01.jpg); background-size: cover; position: relative;}
+#comm01_section .subVisual .overlay {position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,0.6);}
+#comm01_section .subVisual .text {position: absolute; color: #fff; text-align: center; width: 100%; top: 25%; left: 50%; transform: translateX(-50%);}
+#comm01_section .subVisual .text h2 {font-size: 3rem; text-shadow: 0 0 10px rgba(0, 0, 0, .4); font-weight: normal;}
+#comm01_section .subVisual .text p {font-size: 0.9rem; color: rgba(255,255,255,0.5); padding-top: 5px;}
+#comm01_section .subVisual .subnav {position: absolute; height: 47px; bottom: 0; border-top: 1px solid rgba(255,255,255,0.2); width: 100%;}
+#comm01_section .subVisual .subnav_box {line-height: 43px; text-align: center; margin: 0 auto; font-size: 1rem;}
+#comm01_section .subVisual .subnav_box a {display: inline-block; padding: 0 20px; position: relative; color: rgba(255,255,255,.7);}
+#comm01_section .subVisual .subnav_box a.on {color: #fff}
+#comm01_section .subVisual .subnav_box a.on:before {content: ''; position: absolute; width: 100%; height: 2px; background: #a84142; top: -1px; left: 0; right: 0; color: rgba(255,255,255,1);}
+
+/* 타이틀 */
+#comm01_section p {line-height: 1.7rem; font-size: 1.1rem; color: #777;}
+#comm01_section .subTit {padding: 70px 0 60px; text-align: center; border-bottom: 2px solid #eaeaea;}
+#comm01_section .subTit h2 {font-size: 2.1rem;}
+#comm01_section .subTit p {padding-top: 9px;}
+
+/* 테이블 */
+#comm01_section .noticeWrap {padding: 70px 10px 130px; color: #555; font-size: 0.9rem;}
+#comm01_section .noticeWrap col:nth-child(1) {width: 12%;}
+#comm01_section .noticeWrap col:nth-child(2) {width: auto;}
+#comm01_section .noticeWrap col:nth-child(3) {width: 16%;}
+#comm01_section .noticeWrap col:nth-child(4) {width: 20%;}
+#comm01_section .noticeWrap td {border-bottom: 1px solid #ccc; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+#comm01_section .noticeWrap td:nth-child(2) {text-align: left; padding: 13px 5px;}
+#comm01_section .noticeWrap th {border-bottom: 1px solid #ccc; border-top: 3px solid #777; padding: 12px 5px; background: #f2f2f2; font-weight: bold;}
+#comm01_section .noticeWrap tr:hover {background: #f8f8f8;}
+/* 글쓰기 */
+#comm01_section .noticeWrap .bottomBox {position: relative; text-align: center; padding-top: 36px;}
+#comm01_section .bottomBox .writebtn {position: absolute; left: 0; top: 0; margin: 30px 0 0 10px; border-radius: 5px; color: #fff; background: #a84142;}
+#comm01_section .bottomBox .writebtn a {padding: 6px 17px; display: block;}
+/* 번호 */
+#comm01_section .bottomBox .numlist {display: inline-block; font-size: 0.9rem;}
+#comm01_section .bottomBox .searchform {position: absolute; top: 0; right: 0; padding: 34px 20px 0 0;}
+#comm01_section .bottomBox .numlist span {display: inline-block; cursor: pointer;}
+#comm01_section .bottomBox .numlist span:first-child {border-right: 8px solid #333; border-top: 5px solid transparent; border-bottom: 5px solid transparent; margin-right: 13px;}
+#comm01_section .bottomBox .numlist span:last-child {border-left: 8px solid #333; border-top: 5px solid transparent; border-bottom: 5px solid transparent; margin-left: 13px;}
+#comm01_section .bottomBox .numlist a {display: inline-block; padding: 0 6px; color: #666;}
+#comm01_section .bottomBox .numlist a:hover {text-decoration: underline;}
+#comm01_section .bottomBox .numlist a.on {font-weight: bold; color: #a84142;}
+/* 찾기 */
+#comm01_section .searchform select {height: 25px; vertical-align: top; border: 1px solid #999; background: transparent;}
+#comm01_section .searchform input[type=text] {height: 25px; width: 150px; vertical-align: top; border: 1px solid #999; border-right: none; padding: 0 4px; margin-left: 3px;}
+#comm01_section .searchform input[type=submit] {height: 25px; vertical-align: top; display: inline-block; background: #555; color: #fff; padding: 0 9px; font-size: 0.8rem;}
+
+/* 반응형 */
+@media only screen and (max-width: 1180px) {
+    #comm01_section .noticeWrap {font-size: 1rem;}
+    #comm01_section .noticeWrap .bottomBox {padding-top: 100px;}
+    #comm01_section .bottomBox .numlist {font-size: 1rem;}
+}
+@media only screen and (max-width: 800px) {
+    #comm01_section .subVisual .text h2 {font-size: 2.4rem;}
+    #comm01_section .subVisual .text p {font-size: 0.8rem; padding-top: 0;}
+    #comm01_section .subVisual .subnav_box {font-size: 1rem;}
+    #comm01_section .subVisual .subnav_box a {padding: 0 15px;}
+    #comm01_section .subTit {width: 95%; padding: 70px 10px 60px;}
+    #comm01_section .subTit h2 {font-size: 1.8rem;}
+    #comm01_section p {font-size: 1rem;}
+    #comm01_section .noticeWrap {padding: 70px 10px 130px;}
+    #comm01_section .noticeWrap col:nth-child(1),
+    #comm01_section .noticeWrap th:nth-child(1),
+    #comm01_section .noticeWrap td:nth-child(1),
+    #comm01_section .noticeWrap col:nth-child(4),
+    #comm01_section .noticeWrap th:nth-child(4),
+    #comm01_section .noticeWrap td:nth-child(4) {display: none;}
+    #comm01_section .noticeWrap col:nth-child(3) {width: 25%;}
+    #comm01_section .noticeWrap .bottomBox {padding-top: 80px;}
+    #comm01_section .bottomBox .writebtn {right: 0; margin: 20px 10% 0;}
+    #comm01_section .bottomBox .searchform {width: 100%; top: 100%; right: 50%; transform: translateX(50%); padding: 20px 0 0;}
+
+}

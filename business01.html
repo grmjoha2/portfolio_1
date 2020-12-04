@@ -1,0 +1,114 @@
+<div id="containerBox">
+    <section id="bus01_section" class="bus01_section">
+        <div class="subVisual">
+            <div class="overlay">
+                <div class="text">
+                    <h2>BUSINESS</h2>
+                    <p>HOME&nbsp;&nbsp;>&nbsp;&nbsp;사업분야&nbsp;&nbsp;>&nbsp;&nbsp;사업분야01</p>
+                </div>
+                <div class="subnav">
+                    <div class="subnav_box">
+                        <a href="business01.html" class="on">사업분야01</a>
+                        <a href="ready.html">사업분야02</a>
+                        <a href="ready.html">사업분야03</a>
+                        <a href="ready.html">사업분야04</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subTit row">
+            <h2>사업분야01</h2>
+            <p>PAHCOMPANY 홈페이지 사업분야01 페이지 입니다.</p>
+        </div>
+        <div class="contWrap row">
+            <div class="titBox">
+                <h3>PAHCOMPANY는 끊임없는 열정과 도전으로 가치를 창조합니다.</h3>
+                <p>디자인을 통한 비지니스 네트워크를 구축하여 고객의 필요와 요구를 파악하고 기존 사업과 연계하여 시너지를 창출하며 고객 감동을 실현해 나갈 것입니다. PAHCOMPANY는 다양한 환경에 적응하며 경쟁하기 위해 모든 기술과 디자인 역량을 집중하고 고객과의 친밀한 소통과 협력을 통해 최고의 품질을 제공하고 있습니다.</p>
+            </div>
+            <ul class="contBox cf">
+                <li>
+                    <div class="imgBox">
+                        <img src="images/business01_01.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <strong>기업홍보/광고/서비스</strong><br>고객의 필요와 사업환경에 따라 맞춤형 디자인으로 보다 큰 감동을 드립니다.
+                    </div>
+                </li>
+                <li>
+                    <div class="imgBox">
+                        <img src="images/business01_02.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <strong>패션/웨딩/헤어/미용</strong><br>고객의 필요와 사업환경에 따라 맞춤형 디자인으로 보다 큰 감동을 드립니다.
+                    </div>
+                </li>
+                <li>
+                    <div class="imgBox">
+                        <img src="images/business01_03.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <strong>식품/요리/음식/건강</strong><br>고객의 필요와 사업환경에 따라 맞춤형 디자인으로 보다 큰 감동을 드립니다.
+                    </div>
+                </li>
+                <li>
+                    <div class="imgBox">
+                        <img src="images/business01_04.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <strong>인테리어/공예/사진</strong><br>고객의 필요와 사업환경에 따라 맞춤형 디자인으로 보다 큰 감동을 드립니다.
+                    </div>
+                </li>
+                <li>
+                    <div class="imgBox">
+                        <img src="images/business01_05.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <strong>여행/팬션/자동차/음악</strong><br>고객의 필요와 사업환경에 따라 맞춤형 디자인으로 보다 큰 감동을 드립니다.
+                    </div>
+                </li>
+                <li>
+                    <div class="imgBox">
+                        <img src="images/business01_06.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <strong>휘트니스/스포츠/병원</strong><br>고객의 필요와 사업환경에 따라 맞춤형 디자인으로 보다 큰 감동을 드립니다.
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+
+<script>
+    (function($){
+        $('.subnav a').on('click', function(e){
+            e.preventDefault()
+            var url = $(this).attr('href')
+            $('#containerBox').remove()
+            $('#containerArea').load(url)
+        })
+        
+        $('#bus01_section .contWrap .titBox h3, #bus01_section .contWrap .titBox p, #bus01_section .contBox li').hide()
+        $('#bus01_section .contWrap .titBox h3, #bus01_section .contWrap .titBox p').show()
+        $(window).scroll (function(){
+            if ($('#containerBox > section').hasClass('bus01_section')){
+                var sct = $(window).scrollTop()
+                var contBox = $('.contBox').offset().top - ($(window).height()-170)
+                if(sct >= contBox){
+                    for (var i=0; i<$('.contBox li').length; i++){
+                        $('.contBox li').eq(i).css({animationDelay: 0.3*i+'s'})
+                    }
+                    $('.contBox li').show()
+                    $('.contBox').css({height: 'auto'})
+                }
+                if(sct === 0){
+                    $('#bus01_section .contBox li').hide()
+                    $('.contBox').css({height: '820px'})
+                }
+            } 
+        })
+
+    })(jQuery)
+</script>
+    

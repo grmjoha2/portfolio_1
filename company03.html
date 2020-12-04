@@ -1,0 +1,67 @@
+<div id="containerBox">
+    <section id="comp03_section" class="comp03_section">
+        <div class="subVisual">
+            <div class="overlay">
+                <div class="text">
+                    <h2>LOCATION</h2>
+                    <p>HOME&nbsp;&nbsp;>&nbsp;&nbsp;회사소개&nbsp;&nbsp;>&nbsp;&nbsp;오시는길</p>
+                </div>
+                <div class="subnav">
+                    <div class="subnav_box">
+                        <a href="company01.html">회사개요</a>
+                        <a href="company02.html">CEO인사말</a>
+                        <a href="company03.html" class="on">오시는길</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subTit row">
+            <h2>오시는길</h2>
+            <p>PAHCOMPANY 오시는 길을 안내합니다.</p>
+        </div>
+        <div class="mapaddrWrap row">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1582.666915415824!2d127.02756352606205!3d37.50004389492781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1deeb5ec063281bb!2z6re466aw7Lu07ZOo7YSw7JWE7Lm0642w66-4IDPrs4TqtIA!5e0!3m2!1sko!2skr!4v1596082420798!5m2!1sko!2skr" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <div class="addrtable">
+                <table>
+                    <tr>
+                        <td>주소</td>
+                        <td>강남대로96길 서울특별시 강남구 역삼동</td>
+                    </tr>
+                    <tr>
+                        <td>연락처</td>
+                        <td>010-1234-5678</td>
+                    </tr>
+                    <tr>
+                        <td>이메일</td>
+                        <td>email@daum.net</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<script>
+    (function($){
+        $('.subnav a').on('click', function(e){
+            e.preventDefault()
+            var url = $(this).attr('href')
+            $('#containerBox').remove()
+            $('#containerArea').load(url)
+        })
+        
+        $('#comp03_section .addrtable table').hide()
+        $(window).scroll (function(){
+            if ($('#containerBox > section').hasClass('comp03_section')){
+                var sct = $(window).scrollTop()
+                var table = $('.addrtable').offset().top - ($(window).height()-60)
+                if(sct >= table){$('.addrtable table').show()}
+                if(sct === 0){
+                    $('#comp03_section .addrtable table').hide()
+                }
+            } 
+        })
+
+    })(jQuery)
+</script>

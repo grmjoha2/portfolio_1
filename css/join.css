@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+#join_section .subVisual {height: 286px; background: url(../images/sub-visual01.jpg); background-size: cover; position: relative;}
+#join_section .subVisual .overlay {position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,0.6);}
+#join_section .subVisual .text {position: absolute; color: #fff; text-align: center; width: 100%; top: 25%; left: 50%; transform: translateX(-50%);}
+#join_section .subVisual .text h2 {font-size: 3rem; text-shadow: 0 0 10px rgba(0, 0, 0, .4); font-weight: normal;}
+#join_section .subVisual .text p {font-size: 0.9rem; color: rgba(255,255,255,0.5); padding-top: 5px;}
+#join_section .subVisual .subnav {position: absolute; height: 47px; bottom: 0; border-top: 1px solid rgba(255,255,255,0.2); width: 100%;}
+#join_section .subVisual .subnav_box {line-height: 43px; text-align: center; margin: 0 auto; font-size: 1rem;}
+#join_section .subVisual .subnav_box a {display: inline-block; padding: 0 20px; position: relative; color: rgba(255,255,255,.7);}
+#join_section .subVisual .subnav_box a.on {color: #fff}
+#join_section .subVisual .subnav_box a.on:before {content: ''; position: absolute; width: 100%; height: 2px; background: #a84142; top: -1px; left: 0; right: 0; color: rgba(255,255,255,1);}
+
+/* 타이틀 */
+#join_section p {line-height: 1.7rem; font-size: 1.1rem; color: #777;}
+#join_section .subTit {padding: 70px 0 60px; text-align: center; border-bottom: 2px solid #eaeaea;}
+#join_section .subTit h2 {font-size: 2.1rem;}
+#join_section .subTit p {padding-top: 9px;}
+
+#join_section .joinWrap {padding: 60px 30px 130px;}
+#join_section .commentBox {background: #f5f5f5; border: 1px solid #e4e4e4; padding: 32px 40px; line-height: 1.6em; font-size: 1rem; color: #777;}
+#join_section .commentBox p {color: #222; font-size: 1.1rem; font-weight: bold; margin-bottom: 5px;}
+
+#join_section .joinBox {padding: 60px 0 0;}
+#join_section .joinBox h3 {font-size: 1.2rem; border-bottom: 2px solid #000; padding-bottom: 10px;}
+#join_section .joinBox .pilsoo {position: relative;}
+#join_section .joinBox .pilsoo:before {content: '*'; position: absolute; font-size: 1rem; color: #f00; display: inline-block; line-height: 55px; vertical-align: top; width: 18px; left: -17px;}
+#join_section .join_list {border-bottom: 1px solid #cecece;}
+#join_section .join_list li {border-bottom: 1px solid #efefef;}
+#join_section .join_list .label_box {display: inline-block; width: 23%; background: #f7f7f7; height: 52px; line-height: 52px; vertical-align: top; text-align: center; font-size: 1rem; font-weight: bold;}
+#join_section .join_list .input_box {display: inline-block; vertical-align: top; height: 52px; padding: 9px 6px 9px;}
+#join_section .join_list .input_box input[type=text],
+#join_section .join_list .input_box input[type=password],
+#join_section .join_list .input_box select
+{height: 100%; border: 1px solid #ccc; padding: 0 1rem; vertical-align: top; font-size: 0.9rem; padding: 0 0.5em;}
+#join_section .join_list .pw_self {margin-left: 6px;}
+#join_section .join_list a {display: inline-block; background: #d7ba9a; color: #fff; font-size: 0.9rem; padding: 5px 10px; vertical-align: top; border-radius: 5px; margin: 0 6px; letter-spacing: -1px; border: 1px solid #d2b18c;}
+#join_section .join_list span {display: inline-block; vertical-align: middle; font-size: 0.9rem; color: #333; padding: 0 3px;}
+#join_section .join_list li:nth-child(2) span {margin-left: 8px;}
+#join_section .join_list .email_box {padding: 8px 0;}
+#join_section .join_list .radio_box {display: inline-block; height: 52px; font-size:1rem; padding-left: 10px;}
+#join_section .join_list .radio_box input {vertical-align: middle;}
+#join_section .join_list .radio_box input[type="radio"] {display: none;}
+#join_section .join_list .radio_box label {vertical-align: top; line-height: 52px; margin-right: 15px; font-size: 1rem;}
+#join_section .join_list .radio_box label:before {content: '\f111'; font-family: 'Font Awesome 5 Free'; font-weight: 400; color: #ccc; font-size: 1rem; line-height: 52px; margin-right: 5px; cursor: pointer;}
+#join_section .join_list .radio_box input[type="radio"]:checked + label:before {content: '\f192'; color: #a84142;}
+#join_section .join_list .radio_box input:nth-of-type(2) {margin-left: 10px;}
+#join_section ::placeholder {font-size: 0.8rem; color: #a1a1a1;}
+#join_section .join_list .w200 {width: 200px;}
+#join_section .join_list .w300 {width: 300px;}
+#join_section .join_form .btn {text-align: center; margin-top: 20px;}
+#join_section .join_form .btn button {padding: 10px 20px; margin: 0 1px; background: #a84142; font-size: 1rem; color: #fff; border-radius: 4px;}
+#join_section .join_form .btn button[type="reset"] {background: #a1a1a1;}
+
+/* 반응형 */
+@media only screen and (max-width: 1180px) {
+    #join_section .joinWrap {padding: 60px 10px 130px;}
+    #join_section .join_list .w200 {width: 170px;}
+}
+@media only screen and (max-width: 800px){
+    #join_section .subVisual .text h2 {font-size: 2.4rem;}
+    #join_section .subVisual .text p {font-size: 0.8rem; padding-top: 0;}
+    #join_section .subVisual .subnav_box {font-size: 1rem;}
+    #join_section .subVisual .subnav_box a {padding: 0 15px;}
+    #join_section .subTit h2 {font-size: 1.8rem;}
+    #join_section p {font-size: 1rem;}
+    #join_section .subTit {width: 95%; padding: 70px 10px 60px;}
+    #join_section .commentBox {text-align: center; padding: 32px 20px;}
+    #join_section .join_list .label_box {width: 30%; height: auto; line-height: 1.6rem; padding: 11px 0; letter-spacing: -0.05rem; font-size: 0.9rem; font-weight: normal; background: none;}
+    #join_section .join_list .input_box {width: 68%; height: auto;}
+    #join_section .joinBox .pilsoo:before {line-height: 1.6rem; padding-top: 3px;}
+    #join_section .join_list .input_box input[type=text], #join_section .join_list .input_box input[type=password], #join_section .join_list .input_box select {padding: 0.5rem 1rem;}
+    #join_section .join_list a {margin: 9px 6px 2px;}
+    #join_section .join_list span {line-height: 1rem;}
+    #join_section .join_list li:nth-child(2) span {margin: 9px 0 0;}
+    #join_section .join_list .input_box #domain {margin: 9px 0;}
+    #join_section .join_list .pw_self {margin-top: 9px; margin-left: 0;}
+    #join_section .join_list .w300 {width: 200px;}
+}

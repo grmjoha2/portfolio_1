@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+#comp01_section .subVisual {height: 286px; background: url(../images/sub-visual01.jpg); background-size: cover; position: relative;}
+#comp01_section .subVisual .overlay {position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,0.6);}
+#comp01_section .subVisual .text {position: absolute; color: #fff; text-align: center; width: 100%; top: 25%; left: 50%; transform: translateX(-50%);}
+#comp01_section .subVisual .text h2 {font-size: 3rem; text-shadow: 0 0 10px rgba(0, 0, 0, .4); font-weight: normal;}
+#comp01_section .subVisual .text p {font-size: 0.9rem; color: rgba(255,255,255,0.5); padding-top: 5px;}
+#comp01_section .subVisual .subnav {position: absolute; height: 47px; bottom: 0; border-top: 1px solid rgba(255,255,255,0.2); width: 100%;}
+#comp01_section .subVisual .subnav_box {line-height: 43px; text-align: center; margin: 0 auto; font-size: 1rem;}
+#comp01_section .subVisual .subnav_box a {display: inline-block; padding: 0 20px; position: relative; color: rgba(255,255,255,.7);}
+#comp01_section .subVisual .subnav_box a.on {color: #fff}
+#comp01_section .subVisual .subnav_box a.on:before {content: ''; position: absolute; width: 100%; height: 2px; background: #a84142; top: -1px; left: 0; right: 0; color: rgba(255,255,255,1);}
+
+/* 타이틀 */
+#comp01_section p {line-height: 1.7rem; font-size: 1.1rem; color: #777;}
+#comp01_section .subTit {padding: 70px 0 60px; text-align: center; border-bottom: 2px solid #eaeaea;}
+#comp01_section .subTit h2 {font-size: 2.1rem;}
+#comp01_section .subTit p {padding-top: 9px;}
+/* part1 */
+#comp01_section .part1 {text-align: center; height: 650px;}
+#comp01_section .part1 h3 {font-size: 1.7rem; font-weight: normal; padding: 70px 0 30px; margin-top: 30px; opacity: 0; animation: secani 1s both;}
+#comp01_section .part1 h3 strong {background: #a84142; color: #fff; padding: 0 4px;}
+#comp01_section .part1 p {margin-top: 30px; opacity: 0; animation: secani 1s both; animation-delay: 0.3s;}
+#comp01_section .part1_list {padding: 50px 100px 100px;}
+#comp01_section .part1_list ul li {float: left; width: 25%; padding: 30px 22px; margin-top: 30px; opacity: 0; animation: secani 1s both; transition: 0.3s ease;}
+#comp01_section .part1_list ul li:hover {padding: 15px 22px;}
+#comp01_section .part1_list ul li:nth-child(2) {animation-delay: 0.3s;}
+#comp01_section .part1_list ul li:nth-child(3) {animation-delay: 0.6s;}
+#comp01_section .part1_list ul li:nth-child(4) {animation-delay: 0.9s;}
+#comp01_section .part1_list ul li i {font-size: 70px; color: rgba(0,0,0,.7);}
+#comp01_section .part1_list ul li h4 {color: #333; padding: 20px 0 15px; font-size: 1.3rem;}
+#comp01_section .part1_list ul li p {font-size: 1rem;}
+/* part2 */
+#comp01_section .part2 {background: #f2f2f2; padding: 70px 0; height: 549px;}
+#comp01_section .part2 .img_box {float: left; width: 47%; height: 390px; overflow: hidden; margin-top: 30px; opacity: 0; animation: secani 1s both;}
+#comp01_section .part2 .img_box img {min-height: 100%;}
+#comp01_section .part2 .text {float: right; width: 53%; padding: 0 50px 0 60px; margin-top: 30px; opacity: 0; animation: secani 1s both 0.3s;}
+#comp01_section .part2 .text h3 {color: #444; font-size: 1.7rem; font-weight: normal;}
+#comp01_section .part2 .text p {padding: 25px 0;}
+#comp01_section .part2 .text ul li {color: #666; font-size: 1.1rem; line-height: 1.7rem;}
+#comp01_section .part2 .text ul li strong {font-weight: bold;}
+#comp01_section .part2 .text ul li span {color: #a84142;}
+/* 공통 서브타이틀 */
+#comp01_section .subTit2 {padding: 70px 0 60px; text-align: center;}
+#comp01_section .subTit2 h3 {font-size: 2.1rem; margin-top: 30px; opacity: 0; animation: secani 1s both;}
+#comp01_section .subTit2 p {color: #777; padding-top: 10px; margin-top: 30px; opacity: 0; animation: secani 1s both 0.3s;}
+/* part3 */
+#comp01_section .part3 {height: 542px;}
+#comp01_section .part3 .part3_list {padding: 0 170px 100px;}
+#comp01_section .part3_list li {position: relative; float: left; width: 33.33%; text-align: center; margin-top: 30px; opacity: 0; animation: secani 1s both;}
+#comp01_section .part3_list li:nth-child(2) {animation-delay: 0.3s;}
+#comp01_section .part3_list li:nth-child(3) {animation-delay: 0.6s;}
+#comp01_section .part3_list li .bgBox {width: 220px; height: 220px; border-radius: 50%; overflow: hidden; display: inline-block; text-align: left; transition: 0.3s ease; opacity: 1;}
+#comp01_section .part3_list li:hover .bgBox {transform: scale(1.1); opacity: 0.8;}
+#comp01_section .part3_list li:nth-child(1) .bgBox {background: #a84142;}
+#comp01_section .part3_list li:nth-child(2) .bgBox {background: #333;}
+#comp01_section .part3_list li:nth-child(3) .bgBox {background: #acacac;}
+#comp01_section .part3_list li .bgBox span {font-size: 17rem; color: rgba(255,255,255,0.2); line-height: 140px;}
+#comp01_section .part3_list h4 {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; font-size: 2rem; font-weight: normal; letter-spacing: -1px;}
+/* part4 */
+#comp01_section .part4 {padding-bottom: 130px; border-top: 1px solid #ccc;}
+#comp01_section .part4 .tableBox {padding: 0 100px;}
+#comp01_section .part4 .tableBox table {margin-bottom: 20px; font-size: 17px; margin-top: 30px; opacity: 0; animation: secani 1s both;}
+#comp01_section .part4 .tableBox table:nth-child(2) {animation-delay: 0.3s;}
+#comp01_section .part4 .tableBox table:nth-child(3) {animation-delay: 0.6s; margin-bottom: 0;}
+#comp01_section .part4 .tableBox td {font-size: 1.1rem; height: 37px; line-height: 37px; color: #777;}
+#comp01_section .part4 .tableBox tr td:nth-child(1) {width: 17%; font-size: 1.6rem; color: #333; font-weight: bold; padding-left: 10px;}
+#comp01_section .part4 .tableBox tr td:nth-child(2) {width: 5%;}
+#comp01_section .part4 .tableBox tr:last-child {border-bottom: 1px dotted #ccc;}
+#comp01_section .part4 .tableBox table:last-child tr:last-child {border-bottom: none;}
+#comp01_section .part4 .tableBox tr:last-child td {padding-bottom: 28px;}
+
+
+/* 반응형 */
+@media only screen and (max-width: 1180px) {
+    #comp01_section .subTit {width: 95%; padding: 70px 20px 40px;}
+    #comp01_section .part1_list {padding: 50px 10px 100px;}
+    #comp01_section .part2 .img_box {height: 432px;}
+    #comp01_section .part2 .text {padding: 0 10px 0 20px;}
+    #comp01_section .part2 .text h3 {font-size: 1.5rem;}
+    #comp01_section .part3 .part3_list {padding: 0 30px 100px;}
+    #comp01_section .part4 {width: 95%;}
+    #comp01_section .part4 .tableBox {padding: 0 30px;}
+}
+@media only screen and (max-width: 800px) {
+    #comp01_section .subVisual .text h2 {font-size: 2.4rem;}
+    #comp01_section .subVisual .text p {font-size: 0.8rem; padding-top: 0;}
+    #comp01_section .subVisual .subnav_box {font-size: 1rem;}
+    #comp01_section .subVisual .subnav_box a {padding: 0 15px;}
+    #comp01_section .subTit h2 {font-size: 1.8rem;}
+    #comp01_section p {font-size: 1rem;}
+    #comp01_section .part1 {height: auto;}
+    #comp01_section .part1 h3 {font-size: 1.4rem;}
+    #comp01_section .part1_list ul li {width: 100%;}
+    #comp01_section .part1_list ul li:hover {padding: 30px 22px;}
+    #comp01_section .part1_list ul li h4 {padding: 15px 0 10px;}
+    #comp01_section .part2 .img_box {height: 320px; width: 100%;}
+    #comp01_section .part2 .text {width: 100%; padding: 30px 0;}
+    #comp01_section .part2 .text h3 {font-size: 1.3rem;}
+    #comp01_section .part2 .text ul li {font-size: 1rem;}
+    #comp01_section .subTit2 {padding: 70px 20px 60px;}
+    #comp01_section .subTit2 h3 {font-size: 1.8rem;}
+    #comp01_section .part3 {height: auto;}
+    #comp01_section .part3_list li {width: 100%; margin-bottom: 30px;}
+    #comp01_section .part4 .tableBox {padding: 0;}
+    #comp01_section .part4 .tableBox td {padding-left: 10px;}
+    #comp01_section .part4 .tableBox tr td:nth-child(1) {font-size: 1.2rem; width: 20%; vertical-align: top;}
+    #comp01_section .part4 .tableBox tr td:nth-child(2) {display: none;}
+}

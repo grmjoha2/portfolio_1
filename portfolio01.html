@@ -1,0 +1,98 @@
+<div id="containerBox">
+    <section id="port01_section" class="port01_section">
+        <div class="subVisual">
+            <div class="overlay">
+                <div class="text">
+                    <h2>PORTFOLIO</h2>
+                    <p>HOME&nbsp;&nbsp;>&nbsp;&nbsp;포트폴리오&nbsp;&nbsp;>&nbsp;&nbsp;포트폴리오01</p>
+                </div>
+                <div class="subnav">
+                    <div class="subnav_box">
+                        <a href="portfolio01.html" class="on">포트폴리오01</a>
+                        <a href="ready.html">포트폴리오02</a>
+                        <a href="ready.html">포트폴리오03</a>
+                        <a href="ready.html">포트폴리오04</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subTit row">
+            <h2>포트폴리오01</h2>
+            <p>PAHCOMPANY 홈페이지 포트폴리오01 페이지 입니다.</p>
+        </div>
+        <div class="contWrap row">
+            <form action="#" method="post" class="pd1_form">
+                <fieldset>
+                    <legend>포트폴리오01</legend>
+                    <select id="pd1_sort" class="sort_lbl">
+                        <option value="all">전체</option>
+                        <option value="category1">카테고리1</option>
+                        <option value="category2">카테고리2</option>
+                        <option value="category3">카테고리3</option>
+                    </select>
+                </fieldset>
+            </form>
+            <div class="list_box">
+                <ul class="cf">
+                    <li class="sort1"><img src="images/portfolio01_01.jpg" alt=""><p>제품06</p></li>
+                    <li class="sort1"><img src="images/portfolio01_02.jpg" alt=""><p>제품05</p></li>
+                    <li class="sort2"><img src="images/portfolio01_03.jpg" alt=""><p>제품04</p></li>
+                    <li class="sort2"><img src="images/portfolio01_04.jpg" alt=""><p>제품03</p></li>
+                    <li class="sort3"><img src="images/portfolio01_05.jpg" alt=""><p>제품02</p></li>
+                    <li class="sort3"><img src="images/portfolio01_06.jpg" alt=""><p>제품01</p></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<script>
+    (function($){
+        $('.subnav a').on('click', function(e){
+            e.preventDefault()
+            var url = $(this).attr('href')
+            $('#containerBox').remove()
+            $('#containerArea').load(url)
+        })
+
+        $('#pd1_sort').on('change', function(){
+            $('#port01_section .list_box li').hide().css({marginTop: '0'})
+            $('#pd1_sort option:selected').each(function() {
+                if($(this).val()==='all'){
+                    $('#port01_section .list_box li').hide().css({marginTop: '0'}).show()
+                    for (var i=0; i<$('.list_box li').length; i++){
+                        $('.list_box li').eq(i).css({animationDelay: 0.3*i+'s'})
+                    }
+                } else if($(this).val()==='category1'){
+                    $('#port01_section .list_box li[class="sort1"]').hide().css({marginTop: '0'}).show()
+                    for (var i=0; i<$('.list_box li[class="sort1"]').length; i++){
+                        $('.list_box li[class="sort1"]').eq(i).css({animationDelay: 0.3*i+'s'})
+                    }
+                } else if($(this).val()==='category2'){
+                    $('#port01_section .list_box li[class="sort2"]').hide().css({marginTop: '0'}).show()
+                    for (var i=0; i<$('.list_box li[class="sort2"]').length; i++){
+                        $('.list_box li[class="sort2"]').eq(i).css({animationDelay: 0.3*i+'s'})
+                    }
+                } else if($(this).val()==='category3'){
+                    $('#port01_section .list_box li[class="sort3"]').hide().css({marginTop: '0'}).show()
+                    for (var i=0; i<$('.list_box li[class="sort3"]').length; i++){
+                        $('.list_box li[class="sort3"]').eq(i).css({animationDelay: 0.3*i+'s'})
+                    }
+                }
+            })
+        })
+
+        for (var i=0; i<$('.list_box li').length; i++){
+            $('.list_box li').eq(i).css({animationDelay: 0.3*i+'s'})
+        }
+        $(window).scroll (function(){
+            if ($('#containerBox > section').hasClass('port01_section')){
+                var sct = $(window).scrollTop()
+                if(sct >= 10){$('.list_box').css({height: 'auto'})}
+                if(sct === 0){$('.list_box').css({height: '618px'})}
+            } 
+        })
+        
+    })(jQuery)
+</script>

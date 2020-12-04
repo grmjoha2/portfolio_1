@@ -1,0 +1,55 @@
+<div id="containerBox">
+    <section id="login_section">
+        <div class="subVisual">
+            <div class="overlay">
+                <div class="text">
+                    <h2>MEMBER</h2>
+                    <p>HOME&nbsp;&nbsp;>&nbsp;&nbsp;로그인</p>
+                </div>
+                <div class="subnav">
+                    <div class="subnav_box">
+                        <a href="login.html" class="on">로그인</a>
+                        <a href="join.html">회원가입</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subTit row">
+            <h2>회원로그인</h2>
+            <p>지금 로그인하시면, 회원님을 위한 서비스를 막힘없이 이용하실 수있습니다. </p>
+        </div>
+        <div class=login>
+            <form action="#" method="post" class="loginform">
+                <fieldset>
+                    <legend>로그인</legend>
+                    <label for="id_lbl">아이디</label>
+                    <input type="text" id="id_lbl"><br>
+                    <label for="pw_lbl">비밀번호</label>
+                    <input type="password" id="pw_lbl">
+                    <button type="submit">LOGIN</button>
+                    <div class="login_btn">
+                        <a href="join.html">회원가입</a>
+                        <a href="#none">아이디찾기</a>
+                        <a href="#none">비밀번호찾기</a>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+</div>
+
+
+<script>
+    $('.subnav a').on('click', function(e){
+        e.preventDefault()
+        var url = $(this).attr('href')
+        $('#containerBox').remove()
+        $('#containerArea').load(url)
+    })
+    $('.login_btn a').on('click', function(e){
+        e.preventDefault()
+        var url = $(this).attr('href')
+        $('#containerBox').remove()
+        $('#containerArea').load(url)
+    })
+</script>

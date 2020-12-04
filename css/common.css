@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+.row {width: 1180px; margin: 0 auto;}
+* {outline: none;}
+
+.toph1NavWrap {background: #000; position: relative; box-shadow: 0 1px 5px 1px rgba(0,0,0,0.2); z-index: 9;}
+.toph1Nav {position: relative; height: 90px; z-index: 8;}
+.toph1Nav h1 a {position: relative; display: inline-block; width: 250px; height: 90px; overflow: hidden;}
+.toph1Nav h1 img {height: 100%; position: relative; z-index: 2;}
+.toph1Nav h1 span {position: absolute; display: inline-block; top:0; height: 90px; width: 250px; z-index: 1;}
+.toph1Nav h1 span:nth-of-type(1) {background: #fff; left: 0;}
+.toph1Nav h1 span:nth-of-type(2) {background: #999; left: 50px;}
+.toph1Nav h1 span:nth-of-type(3) {background: #fff; right: 0%; width: 0px; transform: skewX(20deg); top: 28%; transition: 1s ease; opacity: 0;}
+.toph1Nav h1 a:hover span:nth-of-type(3) {right: 100%; opacity: 0.8; width: 80px;}
+.toph1Nav .lognav-box {position: absolute; width: 75%; right: 0; top: 50%; transform: translateY(-50%);}
+.toplogin {font-size: 15px; right: 0; float: right;}
+.toplogin a {margin-left: 21px; color: rgba(255,255,255,0.8); line-height: 90px;}
+.toplogin a i {font-size: 20px}
+.toplogin a:hover {color: rgba(255,255,255,1);}
+.toph1Nav .nav {float: left; margin-left: 3%;}
+.toph1Nav .nav .depth1 > li {text-align: center; position: relative; display: inline-block;}
+.toph1Nav .nav .depth1 > li > a {display: block; padding: 0 25px; font-size: 17px; color: rgba(255,255,255,0.8); font-weight: bold; line-height: 90px;}
+.toph1Nav .nav .depth2 {position: absolute; top: 100%; left: 0; height: 210px; width: 100%; padding-top: 16px; border-right: 1px solid rgba(255,255,255,.1); display: none;}
+.toph1Nav .nav .depth1 li:first-child .depth2{border-left: 1px solid rgba(255,255,255,.1);}
+.toph1Nav .nav .depth2 > li {font-size: 15px; color: rgba(255,255,255,.6); letter-spacing: -0.5px; position: relative; transition: 0.5s ease;}
+.toph1Nav .nav .depth2 > li > a {display: block; padding: 5px 0;}
+/* hover */
+.toph1Nav .nav .depth1 > li:hover > a {color: rgba(255,255,255,1);}
+.toph1Nav .nav .depth1 > li:hover:before {content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 2px; background: #a84142;}
+.toph1Nav .nav .depth1 > li:hover .depth2 {background: rgba(255,255,255,.05);}
+.toph1Nav .nav .depth2 > li:hover {color: rgba(255,255,255,.9); text-decoration: underline;}
+/* deco-box */
+.toph1NavWrap .deco-box {background: rgba(20,20,20,.9); width: 100%; height: 210px; top: 100%; left: 0; position: absolute; z-index: 7; display: none;} 
+.opennav {display: none;} 
+.toph1NavWrap .mobile-box {display: none;}
+
+/* footer */
+.footMenu {background: #151515; height: 50px; text-align: center; line-height: 50px; letter-spacing: -1px;}
+.footMenu > div {position: relative;}
+.footMenu > div > a {display: inline-block; position: relative; padding: 0 17px; font-size: 0.9rem; color: rgba(255,255,255,0.6); transition: 0.3s ease; z-index: 2;}
+.footMenu a:hover {color: rgba(255,255,255,0.9);}
+.comInfo {background: #333; text-align: center; padding: 40px 0 35px;}
+.comInfo .sns a {display: inline-block; background: rgba(255,255,255,0.7); color: #333; font-size: 1rem; width: 30px; height: 30px; border-radius: 50%; margin: 0 3px; font-weight: bold; line-height: 1.8rem; transition: 0.3s ease;}
+.comInfo .sns a:hover {background: rgba(255,255,255,1);}
+.comInfo .bizInfo {font-size: 0.8rem; color: rgba(255,255,255,0.3); line-height: 1.5em; padding-top: 27px;}
+/* sitemap */
+.footMenu .sitemapBox {position: absolute; top: 0; right: 0; width: 100%; text-align: right; color: rgba(255,255,255,0.6); z-index: 1;}
+.footMenu .sitemapBox .mapbtn {position: relative; padding: 15px;}
+.footMenu .sitemapBox .mapbtn:after {content: ''; position: absolute; display: inline-block; top: 50%; right: 0; border-bottom: 7px solid rgba(255,255,255,0.6); border-left: 4px solid transparent; border-right: 4px solid transparent; transform: translateY(-50%);}
+.footMenu .maplist1 {position: absolute; bottom: 100%; right: 0; width: 100%; text-align: center; line-height: 1.8rem; background: #222; border-top: 3px solid #a84142; padding: 30px 0; display: none;}
+.footMenu .maplist1 a {display: block; font-size: 0.9rem; color: rgba(255,255,255,.5); padding: 5px 0;}
+.footMenu .maplist1 > li {float: left; width: calc(100%/6); vertical-align: top; font-size: 1.1rem; padding: 10px 0 15px; color: rgba(255,255,255,.8); position: relative;}
+.footMenu .maplist1 > li:before {content: ''; position: absolute; width: 1px; height: 210px; top: 0; left: 0; background: rgba(255,255,255,.1);}
+.footMenu .maplist1 span {font-weight: bold;}
+.footMenu .maplist2 {padding-top: 15px;}
+.footMenu .sitemapBox .mapbtn:hover:after {border-bottom: 7px solid rgba(255,255,255,1);}
+.footMenu .sitemapBox .mapbtn.on:after {transform: rotate(180deg) translateY(-50%); top: 40%;}
+.footMenu .maplist2 > li > a:hover {color: rgba(255,255,255,1); text-decoration: underline;}
+
+/* go top btn */
+.goTop {position: fixed; right: 30px; bottom: 30px; width: 50px; height: 50px; border-radius: 50%; background: rgba(0,0,0,0.4); font-size: 11px; color: #fff; display: inline-block; line-height: 60px; text-align: center; font-weight: normal; transition: 0.3s ease;}
+.goTop:before {content: ''; position: absolute; left: 46%; top: 12px; width: 7px; height: 7px; border-top: 1px solid #fff; border-right: 1px solid #fff; transform: rotate(-45deg) translateX(-50%); opacity: 1;}
+.goTop a {display: block;}
+.goTop:hover {background: rgba(0,0,0,0.9);}
+.goTop:hover:before {animation: goTop-ani 1s infinite;}
+@keyframes goTop-ani {
+    0% {top: 12px; opacity: 1;}
+    100% {top: 7px; opacity: 0;}
+  }
+
+/* popup */
+#popupBox {position: absolute; top: 8%; left: 11%; z-index: 10; display: none;}
+#popupBox .btnBox {background: #fff; height: 36px; text-align: right; font-size: 0.8rem; color: #666; line-height: 36px; border-top: 1px solid #e3e3e3; border-bottom: 1px solid #e3e3e3;}
+#popupBox .btnBox input {display: inline-block; vertical-align: middle; margin: 0 5px 2px 2px;}
+#popupBox .btnBox button {height: 100%; width: 36px; border-left: 1px solid #e3e3e3; vertical-align: top; color: #555; line-height: 36px; background: transparent;}
+
+
+/* loading */
+.loading {position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255,255,255,1);z-index: 99;}
+.loading .contBox {position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); text-align: center;}
+.loading .contBox .txtBox {font-family: 'Roboto', sans-serif; font-size: 2.5rem; font-weight: bold; color: #eee; margin-bottom: 20px;}
+.loading .contBox .txtBox span {position: absolute; width: 0%; top: 0; left: 0; color: #777; overflow: hidden;}

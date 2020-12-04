@@ -1,0 +1,57 @@
+<div id="containerBox">
+    <section id="comp02_section" class="comp02_section">
+        <div class="subVisual">
+            <div class="overlay">
+                <div class="text">
+                    <h2>COMPANY</h2>
+                    <p>HOME&nbsp;&nbsp;>&nbsp;&nbsp;회사소개&nbsp;&nbsp;>&nbsp;&nbsp;CEO인사말</p>
+                </div>
+                <div class="subnav">
+                    <div class="subnav_box">
+                        <a href="company01.html">회사개요</a>
+                        <a href="company02.html" class="on">CEO인사말</a>
+                        <a href="company03.html">오시는길</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subTit row">
+            <h2>CEO인사말</h2>
+            <p>PAHCOMPANY 홈페이지 CEO인사말 페이지 입니다.</p>
+        </div>
+        <div class="contWrap row cf">
+            <div class="imgBox">
+                <img src="images/company03_01.jpg" alt="">
+            </div>
+            <div class="textBox">
+                <h3>Your good choice.<br><span>: PAH COMPANY</span></h3>
+                <p>PAHCOMPANY는 끊임없는 열정과 도전으로 디자인 가치를 창조하고 정직과 신뢰를 기반으로 한 맞춤형 서비스를 통해 고객 한사람 한사람의 필요를 채우고 보다 큰 만족과 감동을 드릴 수 있도록 최선을 다하겠습니다.<br><br><em>고객맞춤 디자인수정형의 경우 메인페이지에 보여지는 컨텐츠들의 배열은 고객의 필요와 사업환경에 따라 추가,삭제,이동 등의 수정이 가능합니다. 고객과의 충분한 상담과 협의 후 작업이 진행됩니다.</em><br><br>또한 고객의 회사로고에 사용된 색상에 따라 포인트컬러의 변경은 가능합니다. 참고로 현사이트의 포인트컬러는 레드계열의 색상입니다. (전화요망)<br><br>감사합니다.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<script>
+    (function($){
+        $('.subnav a').on('click', function(e){
+            e.preventDefault()
+            var url = $(this).attr('href')
+            $('#containerBox').remove()
+            $('#containerArea').load(url)
+        })
+        
+        $(window).scroll (function(){
+            if ($('#containerBox > section').hasClass('comp02_section')){
+                var sct = $(window).scrollTop()
+                if(sct >= 10){
+                    $('.contWrap').css({height: 'auto'})
+                }
+                if(sct === 0){
+                    $('.contWrap').css({height: '654px'})
+                }
+            } 
+        })
+
+    })(jQuery)
+</script>

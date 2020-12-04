@@ -1,0 +1,88 @@
+@media only screen and (max-width: 1180px) {
+.row {width: 100%; padding-right: 10px; padding-left: 10px;}
+.toph1Nav h1 {font-size: 1.8rem; color: #fff; line-height: 90px; font-family: 'Roboto', sans-serif; position: absolute; width: 25%;}
+.toph1Nav h1 em {color: #999;}
+.toph1Nav h1 img {display: none;}
+.toph1Nav h1 span {display: none;}
+.toph1Nav .lognav-box {display: block; top: 100%; width: 100%; transform: translateY(0);}
+.toph1Nav .nav {width: 100%; transform: translateY(0); background: rgba(0,0,0,.9); margin-left: 0;}
+.toph1Nav .nav .depth1 {display: block}
+.toph1Nav .nav .depth1 > li {border-bottom: none; display: block;}
+.toph1Nav .nav .depth1 > li > a {padding: 10px 15px; line-height: 35px; transition: all 0.3s}
+.toph1Nav .nav .depth2 {display: block; position: static; height: auto; padding-top: 0;}
+.toplogin {background: rgba(0,0,0,.9); width: 100%; text-align: center; border-top: 1px solid rgba(255,255,255,.15); border-bottom: 1px solid rgba(255,255,255,.15);}
+.toplogin a {display: inline-block; width: 50%; line-height: 55px; margin-left: 0; transition: all 0.3s}
+.toplogin a i {padding: 0 10px;}
+.toplogin a:hover {background: #a84142;}
+.toph1Nav .nav .depth1 > li:hover:before {display: none;}
+.toph1Nav .nav .depth1 > li:hover > a {background: #a84142;}
+.toph1Nav .open-nav {display: block; position: absolute; top: 50%; right: 10px; transform: translateY(-50%); font-size: 25px; color: rgba(255,255,255,0.7); width: 25px;}
+.toph1Nav .open-nav span {display: block; width: 25px; height: 3px; background: rgba(255,255,255,.7); border-radius: 3px; margin-top: 4px; transition: all 0.5s;}
+.toph1Nav .open-nav span:nth-of-type(1) {margin-top: 0;}
+.toph1Nav.on .open-nav span:nth-of-type(2) {display: none;}
+.toph1Nav.on .open-nav span:nth-of-type(1) {transform: rotate(45deg); position: absolute; left: 0;}
+.toph1Nav.on .open-nav span:nth-of-type(3) {transform: rotate(-45deg); position: absolute; top: -4px; left: 0;}
+.toph1NavWrap .deco-box {display: none;}
+.toph1NavWrap .mobile-box {position: fixed; display: none; height: 100%; right: 0; left: 0; top: 0; bottom: 0; background: transparent;}
+.slide {height: 508px;}
+.slide-outer .text h2 {font-size: 3.6rem;}
+/* main */
+.service {height: auto; padding: 90px 0;}
+.service ul li {text-align: center; margin-left: 0;}
+.service ul li h3 {text-align: center;}
+.service ul li p {text-align: center; padding: 20px 10px 23px 10px;}
+.challenge .video_box {width: 50%;}
+.challenge .table_box {width: 50%;}
+.challenge .tabTit ul li a {padding: 12px 20px;}
+.business {height: auto;}
+.business ul li {width: 49%; margin-bottom: 1.7%;}
+.business ul li:nth-child(3) {margin-left: 0;}
+.business ul li .img_box {height: 300px;}
+.business ul li .img_box img {width: 100%; height: auto;}
+.business ul li .text {padding-right: 16px;}
+.inside .overlay > div {width: auto;}
+#main_section .inside .section_tit {padding-top: 100px;}
+.inside ul, .inside .section_tit {padding: 0 2%;}
+.footMenu .sitemapBox .mapbtn {margin-right: 15px;}
+}
+
+
+@media only screen and (max-width: 800px) {
+#popupBox {top: 0; left: 0; transform: scale(0.8);}
+.toph1Nav h1 {font-size: 1.5rem;}
+.slide {height: 460px;}
+.slide-outer .text {width: 90%;}
+.slide-outer .text h2 {font-size: 2.5rem;}
+.slide-outer .text p {font-size: 1rem;}
+.slide-outer .arr {display: none; width: 0;}
+.slide-outer .arr-box {background: none; width: 0;}
+.slide-outer .slick-dots li button {width: 40px; margin: 0 3px;}
+/* main */
+#main_section .section_tit h2 {font-size: 1.7rem;}
+#main_section .section_tit p {font-size: 1rem; padding: 5px 13px 34px;}
+.service {padding: 90px 0 70px; overflow: hidden;}
+.service ul {height: 1280px;}
+.service ul li {width: 100%; padding: 0 20px; margin-bottom: 50px;}
+.service ul li h3 {font-size: 1.3rem;}
+.service ul li p {padding: 4px 10px 13px;}
+.pointmessage {padding: 210px 0;}
+.pointmessage .text h2 {font-size: 1.8rem;}
+.pointmessage .text p {padding: 30px 0;}
+.challenge {height: auto;}
+.challenge .video_box {width: 100%; padding-bottom: 60px; height: 420px;}
+.challenge .table_box {width: 100%; float: none; padding: 0 10px;}
+.challenge .table_box .tabCont {height: 235px;}
+.business ul li {width: 100%; margin: 5%; margin-left: 0;}
+.business ul li .text {text-align: center; padding: 0 16px;}
+.business ul li .text h3 {padding-top: 22px;}
+.business ul li .img_box {height: 240px;}
+#main_section .inside .section_tit {padding-top: 80px;}
+.inside {height: 630px;}
+.inside ul li {width: 48%; margin: 3% 1%; padding: 25px 15px 20px;}
+.inside ul li:first-child {margin-left: 1%;}
+.inside ul li p {font-size: 0.9rem;}
+.footMenu > div > a {padding: 0 3px; font-size: 0.7rem;}
+.footMenu .sitemapBox {display: none;}
+.comInfo {padding: 40px 0 50px;}
+}
+
